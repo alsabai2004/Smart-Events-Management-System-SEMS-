@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنصة الذكية لإدارة الفعاليات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="login-page" class="auth-container">
+        <div class="login-box">
+            <h2>تسجيل الدخول إلى المنصة</h2>
+            <p>يرجى إدخال بيانات الحساب للوصول إلى النظام</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" placeholder="ادخل اسم المستخدم" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" placeholder="ادخل كلمة المرور" required>
+                </div>
+                <button type="submit">دخول النظام</button>
+                <p id="loginError" class="error-msg" style="color: red; margin-top: 10px; font-weight: bold;"></p>
+            </form>
+        </div>
+    </section>
+
+    <div id="main-dashboard" class="hidden">
+        <div class="main-container" dir="rtl">
+
+            <nav class="control-panel-grid no-print">
+                <button onclick="switchSection('home-section')" class="panel-btn">الواجهة الرئيسية</button>
+                <button onclick="switchSection('about-section')" class="panel-btn">عن المنصة</button>
+                <button onclick="switchSection('registration-section')" class="panel-btn">إصدار البطاقات</button>
+                <button onclick="switchSection('members-section')" class="panel-btn">إدارة الأعضاء</button>
+                <button id="darkModeBtn" onclick="toggleDarkMode()" class="panel-btn">🌙 الوضع الليلي</button>
+                <!-- <button id="logoutBtn" class="panel-btn logout-btn">تسجيل الخروج</button> -->
+            </nav>
+
+            <main class="container">
+
+                <section id="home-section" class="dashboard-section">
+                    <header class="header-section">
+                        <div class="welcome-text">
+                            <h1>مرحباً بك في لوحة التحكم في الفعاليات</h1>
+                            <p>يمكنك الاطلاع على معلومات المنصة إدارة الحاضرين، وإصدار بطاقات الحضور فوراً.</p>
+                        </div>
+                        <div class="hero-image">
+                            <img src="ph.png" alt="منتدى الفعاليات الذكية 2026">
+                        </div>
+                    </header>
+                    <div class="designer-line">
+                        <span>======= منصة مؤتمرات =======</span>
+
+                    </div>
+                    <button id="logoutBtn" class="panel-btn logout-btn"
+                        style="display: block;margin: 25px out;width: max-content;background-color: #9b2c2c;color: white;">تسجيل
+                        الخروج</button>
+
+                </section>
+
+                <!-- <section id="about-section" class="dashboard-section hidden">
+                    <div class="content-box">
+                        <h2>عن المنصة والفعالية</h2>
+                        <p>نحن مؤسسة تقنية تسعى لتنظيم وإدارة المؤنمرات والورش التدريبية بأحدث الوسائل الرقمية والأنظمة
+                            الذكية التي تسهل عمليات التسجيل وإصدار تذاكر الدخول الإلكترونية المشفرة.</p>
+                    </div>
+                </section> -->
+                <section id="about-section" class="dashboard-section hidden">
+                    <div class="content-box">
+                        <h2>عن المنصة والفعالية</h2>
+
+                        <h3 style="color: #1a365d; margin-top: 20px; margin-bottom: 10px;">رؤيتنا ومهمتنا</h3>
+                        <p style="margin-bottom: 20px; color: #4a5568; text-align: justify;">
+                            المنصة الذكية لإدارة الفعاليات هي شريكك الرقمي المتكامل لتنظيم وإدارة المؤتمرات، الورش
+                            التدريبية، والملتقيات الأكاديمية والمهنية بأعلى مستويات الكفاءة والابتكار. تم تصميم هذه
+                            المنصة لتتجاوز الأساليب التقليدية المجهدة، لتنتقل بالمنظمين والمنسقين إلى عصر الأتمتة
+                            الكاملة والتحول الرقمي السلس في إدارة الحشود والبيانات.
+                        </p>
+
+                        <h3 style="color: #1a365d; margin-top: 20px; margin-bottom: 10px;">ماذا تقدم المنصة؟ (محاور
+                            عملنا الأساسية)</h3>
+                        <ul style="margin-right: 20px; margin-bottom: 20px; color: #4a5568; list-style-type: disc;">
+                            <li style="margin-bottom: 10px;"><strong>الإدارة والتنسيق الذكي:</strong> بيئة عمل مرنة تتيح
+                                للمنسقين والمسؤولين التحكم الكامل في هيكلة الفعالية، وضبط قوائم الحاضرين ومتابعة تسجيلهم
+                                لحظة بلحظة وبضغطة زر واحدة.</li>
+                            <li style="margin-bottom: 10px;"><strong>إصدار التذاكر والبطاقات الفورية:</strong> نظام
+                                ديناميكي متطور يقوم بتحويل بيانات الأعضاء المشتركين فوراً إلى بطاقات تعريفية (Badges)
+                                احترافية جاهزة للطباعة، مما يضفي طابعاً رسمياً ومنظماً على الحدث.</li>
+                            <li style="margin-bottom: 10px;"><strong>التعريف الدقيق والفرز الاحترافي:</strong> إمكانية
+                                تصنيف الحضور بدقة متناهية بناءً على مسمياتهم وأدوارهم (كبار الشخصيات VIP، المتحدثين،
+                                الحضور العادي)، مع تدعيم كل فئة بهوية بصرية وألوان مخصصة لتسهيل التنظيم والفرز الميداني.
+                            </li>
+                            <li style="margin-bottom: 10px;"><strong>التحقق الرقمي والـ Barcode:</strong> توليد أرقام
+                                تسلسلية أمنية وفريدة لكل تذكرة مع ميزة محاكاة الباركود، لضمان موثوقية الحضور ومنع
+                                التكرار أو التزوير في الدخول.</li>
+                            <li style="margin-bottom: 10px;"><strong>إدارة السجلات المستدامة:</strong> سجل مركزي ذكي
+                                يحتفظ ببيانات كافة الأعضاء والبطاقات الصادرة بشكل دائم، مما يتيح استعراض البطاقات،
+                                إعادتها، أو تصفيتها وحذفها في أي وقت لضمان مرونة متناهية.</li>
+                        </ul>
+
+
+                        <hr style="margin: 25px 0; border: 1px solid #e2e8f0;">
+
+                        <h3 style="color: #1a365d; margin-bottom: 15px;">
+                            فريق تطوير المنصة
+                        </h3>
+
+                        <p style="color: #4a5568; text-align: justify; line-height: 1.9;">
+                            تم تطوير هذه المنصة بواسطة احد طلاب كلية السعيد للهندسة وتقنية المعلومات
+مشروع مقرر تطوير الويب، حيث تم القيام بالمهام لتحقيق التكامل بين التصميم والبرمجة وبناء واجهات المستخدم.
+                       </p>
+
+                        <ul style="margin-right: 25px; color: #4a5568; line-height: 2;">
+                            <li><strong>Eng\ Mohammed Najeeb Al-Sabai:</strong> (HTML) بناء الهيكل الأساسي للصفحات باستخدام ،(CSS) تصميم وتنسيق واجهات المستخدم ،(JavaScript) برمجة وظائف المنصة والتفاعل باستخدام، تصميم وتنظيم العناصر الدلالية للصفحات.</li>
+                        </ul>
+
+                        <p style="color: #4a5568; text-align: justify; margin-top: 15px;">
+                            وقد عملت على تطوير منصة ذكية تسهل إدارة الفعاليات والمؤتمرات،
+                            مع توفير تجربة استخدام احترافية وتصميم متجاوب يعمل بكفاءة على مختلف الأجهزة.
+                        </p>
+                        <p
+                            style="color: #4a5568; text-align: justify; font-weight: 500; border-top: 1px solid #e2e8f0; padding-top: 15px;">
+                            إننا نؤمن بأن نجاح أي حدث أو مؤتمر يكمن في دقة تفاصيله التنظيمية واحترافية أدواته، ولهذا
+                            جئنا لنمنحك القوة والسرعة لاختصار الوقت والجهد، وتقديم تجربة استثنائية تليق بفعالياتكم
+                            الرائدة.
+                        </p>
+                    </div>
+                </section>
+
+
+
+                <section id="registration-section" class="dashboard-section hidden">
+                    <div class="content-box">
+                        <h2>بوابة إصدار البطاقة الذكية والتذكرة</h2>
+                        <form id="badgeForm">
+                            <div class="form-group">
+                                <label for="confName">اسم الفعالية / المؤتمر:</label>
+                                <input type="text" id="confName" placeholder="مثال: المؤتمر التقني السنوي 2026"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullName">الاسم الكامل للحاضر:</label>
+                                <input type="text" id="fullName" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobTitle">المسمى الوظيفي / التخصص العلمي:</label>
+                                <input type="text" id="jobTitle" placeholder="مثال: مبرمج / مهندس شبكات" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="skills">الوضيفة الأساسية:</label>
+                                <input type="text" id="skills" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="ticketType">فئة التذكرة ونوع الحضور:</label>
+                                <select id="ticketType">
+                                    <option value="Attendee">حضور عادي (Attendee)</option>
+                                    <option value="VIP">كبار الشخصيات (VIP)</option>
+                                    <option value="Speaker">متحدث (Speaker)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="attendeePhoto">رفع الصورة الشخصية للحاضر:</label>
+                                <input type="file" id="attendeePhoto" accept="image/*">
+                            </div>
+                            <button type="submit" id="generateBtn">تأكيد الحجز وتوليد البطاقة</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section id="members-section" class="dashboard-section hidden">
+                    <div class="content-box">
+                        <h2>سجل الأعضاء والبطاقات الصادرة</h2>
+                        <p style="margin-bottom: 15px; color: #718096;">كافة الحاضرين الذين تم إصدار بطاقات لهم محفوظين
+                            هنا في الذاكرة المحلية.</p>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: right;">
+                                <thead>
+                                    <tr style="background-color: #1a365d; color: white;">
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0; text-align: center;">الصورة
+                                        </th>
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0;">الاسم</th>
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0;">الفعالية</th>
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0;">المسمى الوظيفي</th>
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0; text-align: center;">الفئة
+                                        </th>
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0;">الرقم التسلسلي</th>
+                                        <th style="padding: 12px; border: 1px solid #cbd5e0; text-align: center;">
+                                            إجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="membersTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="badge-display-section" class="hidden">
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
