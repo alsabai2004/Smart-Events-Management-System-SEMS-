@@ -37,6 +37,9 @@
 - **LocalStorage API**: لتخزين بيانات الحضور محلياً في المتصفح.
 - **FileReader API**: لقراءة الصور المرفوعة وتحويلها إلى Base64 لعرضها وعرضها في البطاقة.
 
+
+---
+```
 ## هيكل المشروع
 
 Smart-Events-and-Conferences-Management-System-(SECMS)/
@@ -44,7 +47,8 @@ Smart-Events-and-Conferences-Management-System-(SECMS)/
 ├── style.css         # جميع تنسيقات وتصميمات المنصة
 └── script.js         # منطق التطبيق، التفاعلات، وإدارة البيانات (JavaScript)
 
-
+```
+---
 ## دليل الاستخدام
 
 ### تسجيل الدخول
@@ -98,4 +102,4 @@ Smart-Events-and-Conferences-Management-System-(SECMS)/
 - هذا المشروع هو نموذج أولي لمنصة إدارة فعاليات ويمكن تطويره ليشمل ميزات أكثر تعقيداً مثل الاتصال بقاعدة بيانات حقيقية، أو إرسال إشعارات، أو إنشاء تقارير إحصائية.
 
 ---
-تم تطويره بواسطة **Eng\ Mohammed Najeeb Al-Sabai** كجزء من مشروع مقرر تطوير الويب.
+تم تطويره بواسطة **Eng\ Mohammed Najeeb Al-Sabai**.
